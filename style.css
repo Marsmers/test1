@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 15%;
+    box-sizing: border-box;
+    background-color: #d3b714;
+    justify-content: space-between;
+    padding: 20px;
+
+
+    
+} 
+ 
+.header_logo{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-self: center;
+    align-content: flex-start;
+    flex-grow: 2;
+    
+}
+
+.header_nav{
+    width: 350px;
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.header_nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    flex-direction: row;
+    
+
+}
+.header_nav li a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.main{
+    height: 100%;
+    display: flex;
+}
+
+.content{
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+}
+
+.content>p{
+    text-align: center;
+}
+
+.content h2{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.bloks{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.card{
+    width: 28%;
+    height: 45%;
+    border: #000000 solid 2px;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform ease 0.5s;
+}
+
+.card:hover{
+    transform: translateY(-7px);
+    background-color: #a5e0b7;
+    box-shadow: 5px 5px 15px  black;
+}
+
+.card img{
+    width: 70px;
+    height: 70px;
+    min-height: 70px;
+    border-radius: 50%;
+    border: #474444 9px solid;
+    object-fit: cover;
+}
+
+.paragraf{
+    height: 60px;
+    overflow: hidden;
+    padding: 5px 0;
+    font-size: 14px;
+}
+.card h3{
+    font-size: 16px;
+}
+
+.button, .button2, .button3, .button4, .button5, .button6{
+    background-color: rgb(85, 80, 80);
+    color: white;
+    width: 50px;
+    height: 25px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1apx 1px 5px rgb(0, 0, 0);
+}
+
+.aside1{
+    order: 1;
+    width: 210px;
+    background-color: #c798b9;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+.aside2{
+    order: 3;
+    width: 210px;
+    background-color: #9cb1c7;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+.footer{
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #86ec86;
+}
+
+
+.holder{
+    margin: 20px auto;
+    width: 450px;
+    height: 150px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 40px 40px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.item{
+    height: 50%;
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.holder div:nth-child(1){
+    width: 50%;
+    background-color: orange;
+
+}
+
+.holder div:nth-child(2){
+    flex-grow: 1;
+    background-color: blue;
+    order: 4;
+}
+
+.holder div:nth-child(3){
+    flex-grow: 1;
+    background-color: purple;
+    order: 3;
+}
+
+.holder div:nth-child(4){
+    flex-grow: 1;
+    background-color: green;
+    order: 5;
+}
+
+.holder div:nth-child(5){
+    width: 50%;
+    background-color: yellow;
+}
+
+.space{
+    height: 50px;
+}
+
+/* приховуємо чекбокс */
+#menu__toggle {
+    opacity: 0;
+  }
+  /* стилізуємо кнопку */
+  .menu__btn {
+    display: flex; /* використовуємо flex для центрування вмісту */
+    align-items: center;  /* центруємо вміст кнопки */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* додаємо "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+  /* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #cbd500;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+  
+  /* элементи меню */
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+  }
+    
+  @media (min-width: 1200px)
+  {
+    .menu__btn{
+        display: none;
+    }
+  }
+
+
+  @media (max-width: 1199px) {
+    .aside1{
+        display: none;
+    }
+    .menu__btn{
+        display: none;
+    }
+    }
+
+    @media (max-width: 992px) { 
+        .aside2{display: none;
+        }
+        .header_nav{
+            display: none;
+        } 
+        .menu__btn{
+            display: block;
+        }
+        
+    }
+
+    @media (max-width: 768px) {
+        .bloks{
+            justify-content: center;
+        }
+
+        .card{
+         margin: 20px;
+         width: 600px;
+        }
+        .footer{
+            margin-top: 200vh;
+        }
+        .paragraf{
+            font-size: 25px;
+            height: 150px;
+        }
+        .header_nav{
+            display: none;
+        }
+        
+    
+    }
